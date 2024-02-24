@@ -12,6 +12,8 @@ import NewCostomer from './Components/Sales/Costomers/NewCostomer';
 import Suppliers from './Components/Purchases/Suppliers/Suppliers';
 import NewSupplier from './Components/Purchases/Suppliers/NewSupplier';
 import PuschaseInvoice from './Components/Purchases/PurchasingInvoice/PuschaseInvoice';
+import NewPurchaseInvoice from './Components/Purchases/PurchasingInvoice/NewPurchaseInvoice';
+import Articals from './Components/Sales/Articals';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
     <Route path='/suppliers' element={<Suppliers/>}></Route>
     <Route path='/suppliers/:id' element={<NewSupplier/>}></Route>
     <Route path='/purchases' element={<PuschaseInvoice/>}></Route>
+    <Route path='/purchases/:id' element={<NewPurchaseInvoice/>}></Route>
+    <Route path='/articals' element={<Articals/>}></Route>
   </Routes>
   <ToastContainer /> 
     </div>

@@ -15,7 +15,7 @@ import { FaHome } from "react-icons/fa";
 const SideLinks = () => {
     const { pathname } = useLocation();
     return (
-        <ul className={`flex-1  menu menu-horizontal overflow-hidden transition-all`} >
+        <ul className={`flex-1  menu menu-horizontal overflow-hidden transition-all text-gray-500`} >
 
             <Link to="/home" className='w-full'>
                 <li className={`flex justify-between w-full ${pathname === "/home" ? "bg-indigo-800 text-white rounded-lg" : ""}`}>
@@ -42,9 +42,9 @@ const SideLinks = () => {
                                 <a>Customer </a>
                             </li>
                         </Link>
-                        <li className='hover:bg-indigo-800 font-semibold hover:text-white'>
+                        <Link to={"/articals"}><li className={`hover:bg-indigo-800 font-semibold hover:text-white ${pathname === "/articals"?  "bg-indigo-800 font-semibold rounded-lg text-white" : ""}`}>
                             <a>Articals </a>
-                        </li>
+                        </li></Link>
                     </ul>
                 </details>
             </li>
@@ -55,7 +55,7 @@ const SideLinks = () => {
                         <FaBoxOpen className="text-3xl" />  Purchasing
                     </summary>
                     <ul className="p-2 bg-base-100 rounded-t-none z-20 w-full">
-                        <Link to={"/purchases"}><li className='hover:bg-indigo-800 font-semibold hover:text-white'>
+                        <Link to={"/purchases"}><li className={`hover:bg-indigo-800 font-semibold hover:text-white ${pathname === "/purchases" || pathname === "/purchases/1" ? "bg-indigo-800  font-semibold rounded-lg text-white" : ""}`}>
                             <a>Purchase invoice</a>
                         </li></Link>
                         <Link to={"/suppliers"}>
