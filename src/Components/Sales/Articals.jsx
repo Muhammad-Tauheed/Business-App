@@ -26,7 +26,7 @@ const Articals = () => {
                                 <div className='border-b w-100'>
                                     <h1 className='text-xl'>Basic information</h1>
                                 </div>
-                                <span className='flex items-center mt-5'><input type="checkbox" defaultChecked className="checkbox" />Active</span>
+                                <span className='flex items-center mt-5 gap-2'><input type="checkbox" defaultChecked className="checkbox" />Active</span>
 
                                 <div className='flex w-100 justify-between mt-3'>
                                     <div className='flex flex-col gap-4'>

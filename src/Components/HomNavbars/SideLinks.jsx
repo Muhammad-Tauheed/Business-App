@@ -27,7 +27,7 @@ const SideLinks = () => {
 
             <li className={`w-full`}>
                 <details className={`flex justify-evenly w-full `}>
-                    <summary className='px-10 text-xl font-semibold'>
+                    <summary className={`px-10 text-xl font-semibold  ${pathname === "/saleInvoice" || pathname === "/saleInvoice/1" || pathname === "/customers" || pathname === "/customers/1" || pathname === "/articals" ? "bg-indigo-800  font-semibold rounded-lg text-white hover:text-black " : ""}`}>
                         <FaMoneyBillAlt className="text-3xl" />  Sales
                     </summary>
                     <ul className="p-2 bg-base-100 rounded-t-none z-20 w-full ">
@@ -51,7 +51,7 @@ const SideLinks = () => {
 
             <li className='w-full'>
                 <details className='flex justify-between w-full'>
-                    <summary className='px-10 text-xl font-semibold'>
+                    <summary className={`px-10 text-xl font-semibold ${pathname === "/purchases" || pathname === "/purchases/1" || pathname === "/suppliers" || pathname === "/suppliers/1" ? "bg-indigo-800  font-semibold rounded-lg text-white hover:text-black " : ""}`}>
                         <FaBoxOpen className="text-3xl" />  Purchasing
                     </summary>
                     <ul className="p-2 bg-base-100 rounded-t-none z-20 w-full">

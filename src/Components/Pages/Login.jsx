@@ -14,15 +14,15 @@ const Login = () => {
 	return (
 		<div className='flex flex-col h-full items-center justify-center min-w-200 mx-auto'>
 			<div className='w-[500px]  p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-				<h1 className='text-3xl font-semibold text-center text-gray-300'>
+				<h1 className='text-3xl font-semibold text-center text-white'>
 					Login
-					<span className='text-blue-500'> ChatApp</span>
+					<span className='text-blue-500'> Enetworks</span>
 				</h1>
 
 				<form onSubmit={handleSubmit}>
 					<div>
 						<label className='label p-2'>
-							<span className='text-base label-text'>Username</span>
+							<span className='text-white label-text'>Username</span>
 						</label>
 						<input
 							type='text'
@@ -35,7 +35,7 @@ const Login = () => {
 
 					<div>
 						<label className='label'>
-							<span className='text-base label-text'>Password</span>
+							<span className='text-white label-text'>Password</span>
 						</label>
 						<input
 							type='password'

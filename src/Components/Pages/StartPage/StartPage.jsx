@@ -8,7 +8,8 @@ const StartPage = () => {
             id: "basic-bar"
           },
           xaxis: {
-            categories: [4, 5, 6, 7, 8, 9, 10, 11,12]
+            categories: [4, 5, 6, 7, 8, 9, 10, 11,12],
+            text:"Weeks"
           }
         },
         series: [
@@ -28,7 +29,7 @@ const StartPage = () => {
 
     <div className='border shadow-lg flex  items-start mt-5 '>
         <div className='border-r flex flex-col'>
-    <h1 className='text-2xl ml-5 mt-5'>Sale & Purchase</h1>
+    <h1 className='text-2xl ml-5 mt-5'>Sales & Purchase invoices</h1>
     <Chart
               options={state.options}
               series={state.series}
@@ -53,7 +54,7 @@ const StartPage = () => {
 
     <div className='border shadow-lg flex  items-start mt-5 '>
         <div className='border-r flex flex-col'>
-    <h1 className='text-2xl ml-5 mt-5'>Sale & Purchase</h1>
+    <h1 className='text-2xl ml-5 mt-5'>Cash flow prognosis</h1>
     <Chart
     options={state.options}
     series={state.series}

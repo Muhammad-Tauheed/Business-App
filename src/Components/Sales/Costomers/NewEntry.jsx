@@ -54,12 +54,11 @@ const NewEntry = () => {
           <thead>
             <tr>
               <th>Customer no. #</th>
-              <th>Customer name</th>
+              <th>Customer Email</th>
+              <th>Country</th>
+              <th>Contact no.</th>
               <th>Customer address</th>
-              <th>Unit</th>
-              <th>Price</th>
-              <th>Discount</th>
-              <th>I am VAT excel</th>
+             
               <th></th>
             </tr>
           </thead>
@@ -68,12 +67,11 @@ const NewEntry = () => {
             {data.map((item, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
-                <td><input type="text" placeholder="Name" className="input input-bordered input-sm w-full max-w-xs" /></td>
+                <td><input type="text" placeholder="Email" className="input input-bordered input-sm w-full max-w-xs" /></td>
+                <td><input type="text" placeholder="Country" className="input input-bordered input-sm w-full max-w-xs" /></td>
+                <td><input type="text" placeholder="Phone no." className="input input-bordered input-sm w-full max-w-xs" /></td>
                 <td><input type="text" placeholder="Address" className="input input-bordered input-sm w-full max-w-xs" /></td>
-                <td>{item.units}</td>
-                <td><input type="text" placeholder="Price" className="input input-bordered input-sm w-20 max-w-xs" /></td>
-                <td><input type="text" placeholder="Discount" className="input input-bordered input-sm w-20 max-w-xs" /></td>
-                <td>{item.vat}</td>
+
                 <td>
                   <div className="flex items-center gap-2">
                     <button onClick={sub} className="text-red-500 text-2xl">
