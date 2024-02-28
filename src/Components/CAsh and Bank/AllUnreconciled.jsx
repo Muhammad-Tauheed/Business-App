@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
+import { TiTick } from "react-icons/ti";
 
 const AllUnreconciled = () => {
     const [data, setData] = useState([
         {
-            entry: "A987",
-            invoice: "456",
-            customer: "56",
-            customerName: "Aqib",
-            order: "Mobile",
-            category: "Normal",
-            invoiceDate: "2024-2-15",
-            dueDate: "2024-4-15",
-            totalAmount: "15,000"
+            date: "2024-2-24",
+            refrence: "",
+            amount: "-400",
+            Tamount:"123456789",
+            summary: "Aqib",
+            status: "Mobile",
         },
     ])
 
@@ -89,15 +87,12 @@ const AllUnreconciled = () => {
                     <thead>
                         <tr>
 
-                            <th>Entry</th>
-                            <th>Invoice</th>
-                            <th>Customer</th>
-                            <th>Customer Name</th>
-                            <th>Your Order</th>
-                            <th>Category</th>
-                            <th>Invoice date</th>
-                            <th>Due date</th>
-                            <th>Total Amount</th>
+                            <th>Date</th>
+                            <th>Refrance</th>
+                            <th>Amount</th>
+                            <th></th>
+                            <th>Summary</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -108,15 +103,12 @@ const AllUnreconciled = () => {
                             data.map((data) => {
                                 return (
                                     <tr>
-                                        <td>{data.entry}</td>
-                                        <td>{data.invoice}</td>
-                                        <td>{data.customer}</td>
-                                        <td>{data.customerName}</td>
-                                        <td>{data.order}</td>
-                                        <td>{data.category}</td>
-                                        <td>{data.invoiceDate}</td>
-                                        <td className='bg-red-100 text-red-500'>{data.dueDate}</td>
-                                        <td>{data.totalAmount}</td>
+                                        <td>{data.date}</td>
+                                        <td>{data.refrence}</td>
+                                        <td className=''> {data.amount} <br /> {data.Tamount}</td>
+                                        <td><TiTick className='text-green-500 text-xl'/></td>
+                                        <td>{data.summary}</td>
+                                        <td>{data.status}</td>
                                     </tr>
 
                                 )
