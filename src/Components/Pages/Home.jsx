@@ -15,14 +15,14 @@ const Home = () => {
 </div>
 
       <div className='flex'>
-      <div className='lg:w-1/5 bg-black fixed h-full mt-[50px]'>
+      <div className='max-2xl:w-1/5 max-xl:w-1/12 bg-black fixed h-full mt-[50px] overflow-hidden'>
           <Sidebar />
         </div>
 
-        <div className='lg:w-full px-5 ml-[300px] mt-[50px]'>
+        <div className='max-2xl:w-2/3 max-xl:w-1/2 px-5 max-2xl:ml-[250px] max-xl:ml-[80px] mt-[50px]'>
           <StartPage/>
         </div>
-        <div className='lg:w-1/2  mt-[50px]'>
+        <div className='max-xl:w-1/2 max-2xl:w-1/3  mt-[50px]'>
          <TipsATricks/>
         </div>
 

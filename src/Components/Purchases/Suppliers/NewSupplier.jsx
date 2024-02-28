@@ -16,10 +16,10 @@ const NewSupplier = () => {
                     <TopBar />
                 </div>
                 <div className='flex'>
-                    <div className='lg:w-1/5 bg-black fixed h-full mt-[50px]'>
+                    <div className='max-2xl:w-1/5 max-xl:w-1/12 bg-black fixed h-full mt-[50px] overflow-hidden'>
                         <Sidebar />
                     </div>
-                    <div className='lg:w-full px-8 py-5 ml-[300px] mt-[50px] '>
+                    <div className='w-full px-8 max-2xl:ml-[250px] max-xl:ml-[100px] mt-[50px] overflow-x-hidden'>
                         <h1 className='text-3xl '>Add new costomers</h1>
 
                         <div className='bg-white border pt-4 pb-20 mt-10'>

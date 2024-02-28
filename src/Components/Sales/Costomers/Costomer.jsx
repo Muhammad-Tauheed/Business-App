@@ -12,10 +12,10 @@ const Costomer = () => {
                     <TopBar />
                 </div>
                 <div className='flex'>
-                    <div className='lg:w-1/5 bg-black fixed h-full mt-[50px]'>
+                    <div className='max-2xl:w-1/5 max-xl:w-1/12 bg-black fixed h-full mt-[50px] overflow-hidden'>
                         <Sidebar />
                     </div>
-                    <div className='lg:w-full px-8 ml-[300px] mt-[50px]'>
+                    <div className='w-full px-8 max-2xl:ml-[250px] max-xl:ml-[100px] mt-[50px] overflow-x-hidden'>
                         <div className='flex w-100 items-center justify-between py-5'>
                         <h1 className='text-3xl '>Costomers</h1>
                        <Link to="/customers/1"><button className='btn w-52 text-white bg-gray-600 hover:bg-gray-400'>New customer</button></Link> 

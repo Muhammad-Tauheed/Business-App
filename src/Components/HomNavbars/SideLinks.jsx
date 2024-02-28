@@ -15,6 +15,7 @@ import StatrLink from './StatrLink';
 import SalesLink from './SalesLink';
 import PurchasingLink from './PurchasingLink';
 import AccountingLink from './AccountingLink';
+import CashAndBackLink from './CashAndBackLink';
 
 const SideLinks = () => {
     const { pathname } = useLocation();
@@ -27,28 +28,20 @@ const SideLinks = () => {
            <SalesLink/>
            <PurchasingLink/>
 
-            
-
-            
-
-            <li className='flex justify-between w-full'>
-                <a className='px-10 text-xl font-semibold max-2xl:text-xl max-xl:text-[17px] '>
-                    <GiWallet className="text-3xl" /> <span className='max-xl:hidden'>Payroll</span>
+            <li className='flex justify-between w-full '>
+                <a className='px-10 text-xl font-semibold max-2xl:text-[16px] max-xl:text-[14px] '>
+                    <GiWallet className="text-xl" /> <span className='max-xl:hidden'>Payroll</span>
                 </a>
             </li>
 
-            <li className='flex justify-between w-full'>
-                <a className='px-10 text-xl font-semibold max-2xl:text-xl max-xl:text-[17px] '>
-                    <FaMoneyBillTransfer className="text-3xl" /> <span className='max-xl:hidden'>Cash & bank</span>
-                </a>
-            </li>
+            <CashAndBackLink/>
 
             <AccountingLink/>
 
             <li className='w-full'>
                 <details className='flex justify-between w-full'>
-                    <summary className='px-10 text-xl font-semibold max-2xl:text-xl max-xl:text-[17px] '>
-                        <IoMdSettings className="text-3xl" /> <span className='max-xl:hidden'>Settings</span>
+                    <summary className='px-10 text-xl font-semibold max-2xl:text-[16px] max-xl:text-[17px] '>
+                        <IoMdSettings className="text-xl" /> <span className='max-xl:hidden'>Settings</span>
                     </summary>
                     <ul className="p-2 bg-base-100 rounded-t-none z-20 w-full">
                         <li className='hover:bg-indigo-800 font-semibold hover:text-white'>
@@ -62,14 +55,14 @@ const SideLinks = () => {
             </li>
 
             <li className='flex justify-between w-full'>
-                <a className='px-10 text-xl font-semibold'>
-                    <SlWallet className="text-3xl" /> <span className='max-xl:hidden'>Financing</span>
+                <a className='px-10 text-[16px] font-semibold'>
+                    <SlWallet className="text-xl" /> <span className='max-xl:hidden'>Financing</span>
                 </a>
             </li>
 
             <li className='flex justify-between w-full'>
-                <a className='px-10 text-xl font-semibold'>
-                    <IoIosApps className="text-3xl" /> <span className='max-xl:hidden'>Apps</span>
+                <a className='px-10 text-[16px] font-semibold'>
+                    <IoIosApps className="text-xl" /> <span className='max-xl:hidden'>Apps</span>
                 </a>
             </li>
 

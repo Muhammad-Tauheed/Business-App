@@ -3,6 +3,7 @@ import TopBar from '../../HomNavbars/TopBar';
 import Sidebar from '../../HomNavbars/Sidebar';
 import { Link } from 'react-router-dom';
 import AccountDraft from './AccountDraft';
+import SavedJournalEntries from './SavedJournalEntries';
 
 const JournalEntries = () => {
     const [open, setOpen] = useState(false)
@@ -18,12 +19,12 @@ const JournalEntries = () => {
           <TopBar />
         </div>
         <div className='flex'>
-          <div className='lg:w-1/5 bg-black fixed h-full mt-[50px]'>
+          <div className='max-2xl:w-1/5 max-xl:w-1/12 bg-black fixed h-full mt-[50px] overflow-hidden'>
             <Sidebar />
           </div>
 
-          <div className='lg:w-full ml-[300px] mt-[50px]'>
-            <h1 className='text-3xl ml-5 mt-5'>Sale Overview</h1>
+          <div className='w-full px-8 max-2xl:ml-[250px] max-xl:ml-[100px] mt-[50px] overflow-x-hidden'>
+            <h1 className='text-3xl ml-5 mt-5'>Journal entries</h1>
             <div>
               <div className='flex w-100 justify-between py-1 mt-9'>
                 <div className='flex items-center gap-2'>
@@ -41,14 +42,14 @@ const JournalEntries = () => {
                 </button>
                 </div>
 
-                <Link to="/saleInvoice/1"><button className='btn w-52 text-white bg-gray-600 hover:bg-gray-400'>New journal entry</button></Link>
+                <Link to="/newjournal"><button className='btn w-52 text-white bg-gray-600 hover:bg-gray-400'>New journal entry</button></Link>
 
               </div>
 
               <div className='divider'></div>
 
               {activeTab === 1 && <div><AccountDraft/></div>}
-              {activeTab === 2 && <div></div>}
+              {activeTab === 2 && <div><SavedJournalEntries/></div>}
               {activeTab === 3 && <div></div>}
             </div>
           </div>

@@ -89,7 +89,7 @@ const TipsATricks = () => {
           <h1 className='text-2xl ml-5 mt-5'>Revenue, costs and profit/loss</h1>
 
           <div id="chart">
-            <ReactApexChart options={state.options} series={state.series} type="line" height={275} />
+            <ReactApexChart className="max-2xl:h-[258px] max-xl:h-[350px]" options={state.options} series={state.series} type="line"/>
           </div>
           <div id="html-dist"></div>
 
@@ -108,7 +108,7 @@ const TipsATricks = () => {
             </div>
           </div>
         </div>
-        <div className='border shadow-lg flex flex-col bg-white mt-5 px-5 py-5 h-[380px]'>
+        <div className='border shadow-lg flex flex-col bg-white mt-5 px-5 py-5 max-xl:h-[459px] max-2xl:h-[380px]'>
           <div className='flex items-center justify-between'>
             <h1 className='text-2xl '>Tips & Tricks</h1>
             <Link className='text-blue-500 underline'>Show all</Link>

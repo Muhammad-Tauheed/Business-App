@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import TopBar from '../../HomNavbars/TopBar';
 import Sidebar from '../../HomNavbars/Sidebar';
 import { ImAttachment } from 'react-icons/im';
-import PurchaseInputs from './PurchaseInputs';
+import JournalInputs from './JournalInputs';
 
-const NewPurchaseInvoice = () => {
+const NewJournal = () => {
     const [selectedGender, setSelectedGender] = useState('');
 
     const handleGenderChange = (event) => {
@@ -21,73 +21,43 @@ const NewPurchaseInvoice = () => {
           <Sidebar />
         </div>
           <div className='w-full px-8 max-2xl:ml-[250px] max-xl:ml-[100px] mt-[50px] overflow-x-hidden'>
-            <h1 className='text-3xl mt-5'>New Purchase invoice</h1>
+            <h1 className='text-3xl mt-5'>New journal entry</h1>
             <div className='bg-white border px-2 mt-5'>
               <div className='flex w-full bg-white  py-2 border-b'>
                 <div className='flex flex-col w-1/2 gap-3 pr-2'>
 
-                  <div className='flex w-full justify-between items-center'>
-                    <span>Supplier</span>
-                    <input type="text" placeholder="Type here" className=" border input-sm w-full max-w-xs" />
-                  </div>
-
-                  <div className='flex w-full justify-between items-center'>
-                    <span>Invoice date:</span>
-                    <input
-                      type="date"
-                      id="datePicker"
-                      className='border w-[190px]'
-                    />
-                  </div>
-
-                  <div className='flex w-full justify-between items-center'>
-                    <span>Due date:</span>
-                    <input
-                      type="date"
-                      id="datePicker"
-                      className='border w-[190px]'
-                    />
-                  </div>
-
-                  <div className='flex w-full justify-between items-center'>
-                    <span >Purchase invoice</span>
-                    <input type="text" placeholder="Type here" className=" border input-sm w-full max-w-xs" />
-                  </div>
-
-                </div>
-               
-                <div className='flex flex-col w-1/2  pl-2 gap-3'>
-
                 <div className='flex w-full justify-between items-center'>
-                <label className="flex gap-2" >
-                      <input type="radio" name="gender" value="male" className='checkbox' /> Credit note
-                    </label>
-                  </div>
-
-                  <div className='flex w-full justify-between items-center'>
-                    <span>Total ammount</span>
-                    <input type="text" placeholder="Type here" className=" border input-sm w-full max-w-xs" />
-                  </div>
-
-                  <div className='flex w-full justify-between items-center'>
-                    <span>Message</span>
-                    <input type="text" placeholder="Type here" className=" border input-sm w-full max-w-xs" />
-                  </div>
-
-                  <div className='flex w-full justify-between items-center'>
-                    <span>Currency rate</span>
-                    <input type="text" placeholder="Type here" className=" border input-sm w-full max-w-xs" />
+                    <span>Date:</span>
+                    <input
+                      type="date"
+                      id="datePicker"
+                      className='border w-[190px]'
+                    />
                   </div>
 
                   <div className='flex w-full justify-between items-center'>
                     <span>Accounting temp...</span>
                     <input type="text" placeholder="Type here" className=" border input-sm w-full max-w-xs" />
                   </div>
-                  
+
+                  <div className='flex w-full justify-between items-center'>
+                    <span >Description</span>
+                    <input type="text" placeholder="Type here" className=" border input-sm w-full max-w-xs" />
+                  </div>
+
+                  <div className='flex w-full justify-between items-center'>
+                <label className="flex gap-2" >
+                      <input type="radio" name="gender" value="male" className='checkbox' /> Ammounts incl. VAT
+                    </label>
+                  </div>
+
+                </div>
+               
+                <div className='flex flex-col w-1/2  pl-2 gap-3'>
                 </div>
               </div>
+                  <JournalInputs/>
 
-              <PurchaseInputs/>
               <div className='flex items-end justify-between py-5'>
                 <div className='flex flex-col items-center border py-3 bg-purple-200 px-2 cursor-pointer text-gray-500 gap-2'>
                 <ImAttachment className='h-8 w-8' />
@@ -138,4 +108,4 @@ const NewPurchaseInvoice = () => {
   )
 }
 
-export default NewPurchaseInvoice
+export default NewJournal

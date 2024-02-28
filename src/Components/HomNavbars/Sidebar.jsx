@@ -16,7 +16,7 @@ const Sidebar = () => {
     const { pathname } = useLocation();
 return (
 <>
-    <aside className=''>
+    <aside className='overflo-y-scroll'>
         <nav className='h-screen flex flex-col items-center bg-zinc-800 border-r shadow-lg '>
             <SideLinks/>
 

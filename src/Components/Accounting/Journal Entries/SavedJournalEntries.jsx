@@ -1,9 +1,9 @@
 import React from 'react'
 import JournalDetails from './JournalDetails'
 
-const AccountDraft = () => {
-    return (
-        <>
+const SavedJournalEntries = () => {
+  return (
+    <>
             <div className='flex flex-col'>
                 <div className='w-full flex items-center justify-evenly'>
                     <   div className='lg:1/2'>
@@ -48,7 +48,7 @@ const AccountDraft = () => {
 
                 </div>
                 
-             
+                <JournalDetails/>
                 <div className='divider'></div>
               <div className='flex w-100 items-center justify-between'>
                 <div className='flex '>
@@ -63,7 +63,7 @@ const AccountDraft = () => {
 
 
         </>
-    )
+  )
 }
 
-export default AccountDraft
+export default SavedJournalEntries
