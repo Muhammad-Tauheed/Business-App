@@ -17,23 +17,8 @@ const Sidebar = () => {
 return (
 <>
     <aside className=''>
-        <nav className='h-screen flex flex-col bg-white border-r shadow-lg'>
+        <nav className='h-screen flex flex-col items-center bg-zinc-800 border-r shadow-lg '>
             <SideLinks/>
-
-            <div className='border-t flex p-3 '>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNc5lx8Yi6_zm4jfsxmE7Id5GQOjJY5aopKldIHFEPffj593Svs527Xx2cRgEmjwnWzk&usqp=CAU"
-                    className='rounded-full w-10'
-                    alt="" />
-
-                <div className={`flex  items-center overflow-hidden transition-all `}>
-                    <div className='leading-4'>
-                        <h4 className='font-semibold'>Muhammad Tauheed</h4>
-                        <span className='text-xs text-gray-600'>tauheed@gmail.com</span>
-                    </div>
-                    <BsThreeDotsVertical className='text-xl ml-2' />
-                </div>
-
-            </div>
 
         </nav>
     </aside>

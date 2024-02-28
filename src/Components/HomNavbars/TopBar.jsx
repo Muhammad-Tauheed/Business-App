@@ -8,20 +8,20 @@ import { FaQuestionCircle } from "react-icons/fa";
 
 const TopBar = () => {
   return (
-    <div className="flex items-center bg-indigo-800 pr-4 h-[50px] overflow-hidden">
+    <div className="flex items-center bg-white pr-4 h-[50px] overflow-hidden shadow-lg">
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl  text-white">E Networks eEkonomi Pro </a>
+    <a className="btn btn-ghost text-xl  text-black">E Networks ERP </a>
   </div>
   <div className="flex-none">
-    <ul className="menu menu-horizontal px-1  text-white">
-      <li><button className='btn btn-ghost border-white border'>Guide mig</button></li>
-      <li><button className='btn bg-indigo-800 border-indigo-800 text-white hover:bg-900 rounded-full'>+ Add</button></li>
-      <li><button className='btn bg-indigo-800 border-indigo-800 text-white hover:bg-900 rounded-full'><MdLiveHelp /> Help</button></li>
-      <li><button><FaFileUpload className='text-3xl' /></button></li>
-      <li><button><FaFileCircleCheck className='text-3xl' /></button></li>
-      <li><button><AiOutlineMessage className='text-3xl' /></button></li>
-      <li><button><FaBell className='text-3xl' /></button></li>
-      <li><button><FaQuestionCircle  className='text-3xl' /></button></li>
+    <ul className="menu menu-horizontal gap-2 px-1 text-black">
+      <li ><button className=' btn-ghost border-black border'>Guide mig</button></li>
+      <li ><button className=' bg-gray-100 border-black text-black hover:bg-900 rounded-full'>+ Add</button></li>
+      <li ><button className=' bg-gray-100 border-black text-black hover:bg-900 rounded-full'><MdLiveHelp /> Help</button></li>
+      <li><button><FaFileUpload className='text-xl' /></button></li>
+      <li><button><FaFileCircleCheck className='text-xl' /></button></li>
+      <li><button><AiOutlineMessage className='text-xl' /></button></li>
+      <li><button><FaBell className='text-xl' /></button></li>
+      <li><button><FaQuestionCircle  className='text-xl' /></button></li>
       
     </ul>
   </div>

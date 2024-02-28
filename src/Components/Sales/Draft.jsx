@@ -22,7 +22,7 @@ const Draft = () => {
     <input
 				type='text'
 				placeholder='🔍Search…'
-				className='input input-bordered border-indigo-800 w-[300px] py-1 rounded-full'
+				className='input input-bordered border-emerald-600 w-[300px] py-1 rounded-full'
 			/>
 
       <div>

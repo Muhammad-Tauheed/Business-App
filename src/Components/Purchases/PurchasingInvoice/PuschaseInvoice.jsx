@@ -33,28 +33,28 @@ const PuschaseInvoice = () => {
               <div className='flex w-100 justify-evenly py-1 mt-9'>
                 <button
                   onClick={() => handleTabClick(1)}
-                  className={`btn  w-52 ${activeTab === 1 ? "bg-indigo-800 text-white" : "bg-gray-300 border shadow-lg hover:bg-indigo-800 hover:text-white"}`}
+                  className={`btn  w-52 ${activeTab === 1 ? "bg-blue-600 hover:bg-blue-800 text-white" : "bg-gray-300 border shadow-lg hover:bg-blue-600 hover:text-white"}`}
                 >
                   Draft
                 </button>
                 <div className="indicator">
-                  <span className="indicator-item badge bg-blue-500 text-white">19</span>
+                  <span className="indicator-item badge bg-emerald-600 hover:bg-emerald-700 text-white">19</span>
                 <button
                   onClick={() => handleTabClick(2)}
-                  className={`btn w-52 ${activeTab === 2 ? "bg-indigo-800 text-white" : "bg-gray-300 border shadow-lg hover:bg-indigo-800 hover:text-white"}`}
+                  className={`btn w-52 ${activeTab === 2 ? "bg-blue-600 hover:bg-blue-800 text-white" : "bg-gray-300 border shadow-lg hover:bg-blue-600 hover:text-white"}`}
                 >
                   Unpaid purchases invoices
                 </button>
                 </div>
                 <button
                   onClick={() => handleTabClick(3)}
-                  className={`btn w-52 ${activeTab === 3 ? "bg-indigo-800 text-white" : "bg-gray-300 border shadow-lg hover:bg-indigo-800 hover:text-white"}`}
+                  className={`btn w-52 ${activeTab === 3 ? "bg-blue-600 hover:bg-blue-800 text-white" : "bg-gray-300 border shadow-lg hover:bg-blue-600 hover:text-white"}`}
 
                 >
                   
                   All purchases invoices
                 </button>
-                <Link to="/purchases/1"><button className='btn w-52 bg-green-200'>New purchase invoice</button></Link>
+                <Link to="/purchases/1"><button className='btn w-52 text-white bg-gray-600 hover:bg-gray-400'>New purchase invoice</button></Link>
 
               </div>
 

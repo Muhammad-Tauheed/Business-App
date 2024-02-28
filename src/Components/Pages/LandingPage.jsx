@@ -12,8 +12,8 @@ const LandingPage = () => {
     <Navbar/>
     <div style={landingPageStyles} className='flex flex-col h-full items-start justify-center'>
         <div className='flex flex-col ml-40'>
-           <p className='text-4xl text-white'>We Protect</p> 
-          <p className='text-7xl text-white'>What's Important</p> 
+           <p className='max-2xl:text-4xl max-xl:text-2xl text-white'>We Protect</p> 
+          <p className='text-7xl max-xl:text-4xl text-white'>What's Important</p> 
           <p className='text-white text-sm mt-3'>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi laudantium, <br /> 
           ea, in fugit tenetur et ratione delectus omnis, similique assumenda asperiores. <br /> 

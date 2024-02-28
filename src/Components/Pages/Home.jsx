@@ -7,7 +7,7 @@ import TipsATricks from './StartPage/TipsAndTricks'
 
 const Home = () => {
   return (
-    <div className='h-full bg-white' >
+    <div className='h-full bg-white overflow-y-scroll' >
 
 
 <div className='fixed w-screen z-50'>

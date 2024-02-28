@@ -126,19 +126,17 @@ const NewPurchaseInvoice = () => {
                 </div>
               </div>
               <div className='divider'></div>
-                <div className='flex w-100 justify-between items-center pb-5'>
-                  <div className='flex gap-2'>
-                    <button className='btn w-40 shadow-lg bg-gray-300'>Preview</button>
-                    <button className='btn w-40 shadow-lg bg-gray-300'>period allocation</button>
-                  </div>
-                  <div className='flex gap-2'>
-                  <button className='btn w-40 shadow-lg bg-indigo-800 text-white hover:text-black'>Create PDF</button>
-                    <button className='btn w-40 shadow-lg bg-red-600  text-white hover:text-black'>Cancle </button>
-
-                  </div>
-
-
-                </div>
+              <div className="navbar bg-white fixed bottom-0 z-50 w-[975px] shadow-xl">
+                            <div className="flex w-full justify-between">
+                            <div className='flex gap-2'>
+                                    <button className='btn w-40 shadow-lg bg-gray-300 hover:text-black '>pseudonymise</button>
+                                </div>
+                                <div className='flex gap-2'>
+                                    <button className='btn w-40 shadow-lg bg-blue-600 hover:bg-blue-800 text-white'>Save</button>
+                                    <button className='btn w-40 shadow-lg bg-red-600  text-white hover:text-black'>Cancle</button>
+                                </div>
+                            </div>
+                        </div>
             </div>
           </div>
         </div>

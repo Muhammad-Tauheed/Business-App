@@ -4,9 +4,9 @@ import { IoIosArrowForward } from "react-icons/io";
 import ReactApexChart from 'react-apexcharts';
 
 const TipsATricks = () => {
-  const [state,setState]=useState(
+  const [state, setState] = useState(
     {
-          
+
       series: [{
         name: 'Revenues',
         type: 'column',
@@ -35,7 +35,7 @@ const TipsATricks = () => {
             columnWidth: '50%'
           }
         },
-        
+
         fill: {
           opacity: [0.85, 0.25, 1],
           gradient: {
@@ -71,62 +71,60 @@ const TipsATricks = () => {
                 return y.toFixed(0) + " points";
               }
               return y;
-        
+
             }
           }
         }
       },
-    
-    
+
+
     }
   )
   return (
-   <>
-   <div className='flex flex-col'>
-    <div className='border shadow-lg flex flex-col bg-white mt-[75px] px-5 py-5 h-[380px]'>
-    <div className='flex items-center justify-between'>
-    <h1 className='text-2xl '>Tips & Tricks</h1>
-    <Link className='text-blue-500 underline'>Show all</Link>
-    </div>
-
-    <ul className='flex flex-col text-sm text-gray-500 gap-4 mt-5'>
-      <li className='flex items-center gap-5'><IoIosArrowForward /> Best practice in E Networks eEconomi</li>
-      <li className='flex items-center gap-5'><IoIosArrowForward /> Order e-invoice from your supplier</li>
-      <li className='flex items-center gap-5'><IoIosArrowForward /> 4 ways to quick help</li>
-      <li className='flex items-center gap-5'><IoIosArrowForward /> We will guide you in eAccounting</li>
-      <li className='flex items-center gap-5'><IoIosArrowForward /> The card that automates your accounting</li>
-    </ul>
-   </div>
-
-   <div className='flex flex-col border shadow-lg mt-5 '>
-   <h1 className='text-2xl ml-5 mt-5'>Revenue, costs and profit/loss</h1>
-
-   <div id="chart">
-                <ReactApexChart options={state.options} series={state.series} type="line" height={240} />
-              </div>
-              <div id="html-dist"></div>
+    <>
+      <div className='flex flex-col'>
 
 
-              <div className='flex items-center justify-between w-100 px-20'>
-                <div className='flex flex-col items-start  '>
-                <span>Revenues</span>
-                <span>Cost</span>
-                <span>Result</span>
-                </div>
+        <div className='flex flex-col border shadow-lg mt-[75px] '>
+          <h1 className='text-2xl ml-5 mt-5'>Revenue, costs and profit/loss</h1>
 
-                <div className='flex flex-col items-end'>
-                <span>45,987</span>
-                <span className='text-red-500'>0,00</span>
-                <span>45,987</span>
-                </div>
-              </div>
-              
+          <div id="chart">
+            <ReactApexChart options={state.options} series={state.series} type="line" height={275} />
+          </div>
+          <div id="html-dist"></div>
 
 
-   </div>
-   </div>
+          <div className='flex items-center justify-between w-100 px-20'>
+            <div className='flex flex-col items-start  '>
+              <span>Revenues</span>
+              <span>Cost</span>
+              <span>Result</span>
+            </div>
 
-   </>
+            <div className='flex flex-col items-end'>
+              <span>45,987</span>
+              <span className='text-red-500'>0,00</span>
+              <span>45,987</span>
+            </div>
+          </div>
+        </div>
+        <div className='border shadow-lg flex flex-col bg-white mt-5 px-5 py-5 h-[380px]'>
+          <div className='flex items-center justify-between'>
+            <h1 className='text-2xl '>Tips & Tricks</h1>
+            <Link className='text-blue-500 underline'>Show all</Link>
+          </div>
+
+          <ul className='flex flex-col text-sm text-gray-500 gap-4 mt-5'>
+            <li className='flex items-center gap-5'><IoIosArrowForward /> Best practice in E Networks eEconomi</li>
+            <li className='flex items-center gap-5'><IoIosArrowForward /> Order e-invoice from your supplier</li>
+            <li className='flex items-center gap-5'><IoIosArrowForward /> 4 ways to quick help</li>
+            <li className='flex items-center gap-5'><IoIosArrowForward /> We will guide you in eAccounting</li>
+            <li className='flex items-center gap-5'><IoIosArrowForward /> The card that automates your accounting</li>
+          </ul>
+        </div>
+      </div>
+
+    </>
   )
 }
 

@@ -18,17 +18,19 @@ const Navbar = () => {
            +92 45684568
         </div>
       
-     <Link to="/signup"><li><button className='btn btn-ghost border-primary-content px-10 py-1 font-bold'>Signup</button></li></Link>
-     <Link to="/login"><li><button className='btn btn-zinc-200 border-primary-content px-16 py-1 font-bold'>Login</button></li></Link> 
+     <Link to="/signup"><li><button className=' btn-ghost border-primary-content px-10 py-1 font-bold'>Signup</button></li></Link>
+     <Link to="/login"><li><button className='btn-ghost border-primary-content px-16 py-1 font-bold'>Login</button></li></Link> 
       <li className=''>
       <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
-        <li><a>Homepage</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>About</a></li>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-20 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black">
+        <li><a>Who we are </a></li>
+        <li><a>What we offer</a></li>
+        <li><a>For invertors</a></li>
+        <li><a>Careers</a></li>
+        <li><a>News</a></li>
       </ul>
     </div>
       </li>
@@ -37,7 +39,7 @@ const Navbar = () => {
 </div>
 <div className='w-full  flex items-center justify-center fixed mt-[95px]'>
     <div className="flex-none">
-    <ul className="menu menu-horizontal items-center gap-10 text-white ubuntu-bold ">
+    <ul className="menu menu-horizontal items-center gap-10 text-white ubuntu-bold max-xl:hidden">
       <li className=''>
         <details className='dropdown'>
           <summary className='w-full' >

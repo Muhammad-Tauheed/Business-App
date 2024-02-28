@@ -12,7 +12,7 @@ const NewInoice = () => {
   };
   return (
     <>
-      <div className='h-full bg-gray-100' >
+      <div className='h-full bg-gray-100 overflow-y-scroll' >
       <div className='fixed w-screen z-50'>
       <TopBar />
 </div>
@@ -20,9 +20,9 @@ const NewInoice = () => {
       <div className='lg:w-1/5 bg-black fixed h-full mt-[50px]'>
           <Sidebar />
         </div>
-          <div className='lg:w-full px-8 ml-[300px] mt-[50px]'>
+          <div className='lg:w-full px-8 ml-[300px] mt-[50px] '>
             <h1 className='text-3xl mt-5'>New sales invoice</h1>
-            <div className='bg-white border px-2 mt-5'>
+            <div className='bg-white border px-2 mt-5 pt-5 pb-16'>
               <div className='flex w-full bg-white  py-2 border-b'>
                 <div className='flex flex-col gap-5'>
                   <div className='flex gap-16'>
@@ -126,22 +126,21 @@ const NewInoice = () => {
                 </div>
               </div>
               <div className='divider'></div>
-                <div className='flex w-100 justify-between items-center pb-5'>
-                  <div className='flex gap-2'>
+                <div className="navbar bg-white fixed bottom-0 z-50 w-[975px] shadow-xl">
+                    <div className="flex w-full justify-between ">
+                    <div className='flex gap-2'>
                     <button className='btn w-40 shadow-lg bg-gray-300'>Preview</button>
                     <button className='btn w-40 shadow-lg bg-gray-300'>period allocation</button>
                   </div>
-                  <div className='flex gap-2'>
-                  <button className='btn w-40 shadow-lg bg-indigo-800 text-white hover:text-black'>Create PDF</button>
-                    <button className='btn w-40 shadow-lg bg-red-600  text-white hover:text-black'>Cancle </button>
-
-                  </div>
-
-
+                        <div className='flex gap-2'>
+                            <button className='btn w-40 shadow-lg bg-blue-600  hover:bg-blue-800  text-white'>Create PDF</button>
+                            <button className='btn w-40 shadow-lg bg-red-600  text-white hover:text-black'>Cancle </button>
+                        </div>
+                    </div>
                 </div>
             </div>
           </div>
-        </div>
+        </div>  
       </div>
 
 
@@ -150,3 +149,5 @@ const NewInoice = () => {
 }
 
 export default NewInoice
+
+

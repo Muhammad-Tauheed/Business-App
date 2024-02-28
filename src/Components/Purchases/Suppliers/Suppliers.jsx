@@ -18,14 +18,14 @@ const Suppliers = () => {
           <div className='lg:w-full px-8 ml-[300px] mt-[50px]'>
             <div className='flex w-100 items-center justify-between py-5'>
               <h1 className='text-3xl '>Suppliers</h1>
-              <Link to="/suppliers/1"><button className='btn bg-green-500 text-white hover:text-black'>New suppliers</button></Link>
+              <Link to="/suppliers/1"><button className='btn w-52 text-white bg-gray-600 hover:bg-gray-400'>New suppliers</button></Link>
             </div>
             <div className='bg-white border px-2 py-5'>
               <div className='flex items-center justify-start gap-20 '>
                 <input
                   type='text'
                   placeholder='🔍Search…'
-                  className='input input-bordered border-indigo-800 w-[300px] py-1 rounded-full'
+                  className='input input-bordered border-emerald-600 w-[300px] py-1 rounded-full'
                 />
                 <div>
                 </div>
@@ -36,7 +36,7 @@ const Suppliers = () => {
               <div className='divider'></div>
               <div className='flex w-100 items-center justify-between'>
                 <div className='flex '>
-                <button className='btn bg-indigo-800 text-white hover:text-black font-semibold'>Process multiple suppliers</button>
+                <button className='btn shadow-lg bg-blue-600 hover:bg-blue-800 text-white'>Process multiple suppliers</button>
 
                 <button className='btn bg-gray-300 text-black font-semibold'><BsSend /> invite supplier to send e-invoice</button>
                 </div>

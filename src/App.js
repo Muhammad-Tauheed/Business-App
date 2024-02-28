@@ -13,7 +13,11 @@ import Suppliers from './Components/Purchases/Suppliers/Suppliers';
 import NewSupplier from './Components/Purchases/Suppliers/NewSupplier';
 import PuschaseInvoice from './Components/Purchases/PurchasingInvoice/PuschaseInvoice';
 import NewPurchaseInvoice from './Components/Purchases/PurchasingInvoice/NewPurchaseInvoice';
-import Articals from './Components/Sales/Articals';
+import EditCustomer from './Components/Sales/Costomers/EditCustomer';
+import NewArticals from './Components/Sales/Articals/NewArticle';
+import Artical from './Components/Sales/Articals/Article';
+import EditArticle from './Components/Sales/Articals/EditArticle';
+import JournalEntries from './Components/Accounting/Journal Entries/JournalEntries';
 
 function App() {
   return (
@@ -33,7 +37,11 @@ function App() {
     <Route path='/suppliers/:id' element={<NewSupplier/>}></Route>
     <Route path='/purchases' element={<PuschaseInvoice/>}></Route>
     <Route path='/purchases/:id' element={<NewPurchaseInvoice/>}></Route>
-    <Route path='/articals' element={<Articals/>}></Route>
+    <Route path='/newarticles' element={<NewArticals/>}></Route>
+    <Route path='/editcustomer' element={<EditCustomer/>}></Route>
+    <Route path='/article' element={<Artical/>}></Route>
+    <Route path='/editarticle' element={<EditArticle/>}></Route>
+    <Route path='/journalentries' element={<JournalEntries/>}></Route>
   </Routes>
   <ToastContainer /> 
     </div>

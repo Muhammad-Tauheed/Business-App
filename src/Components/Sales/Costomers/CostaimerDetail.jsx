@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CostaimerDetail = () => {
   const [data, setData] = useState([
@@ -102,7 +103,7 @@ const CostaimerDetail = () => {
                     onChange={() => handleSelectSingle(index)}
                   />
                 </td>
-                <td className='text-blue-500 underline'>{item.customer}</td>
+                <Link to="/editcustomer"><td className='text-blue-500 underline'>{item.customer}</td></Link>
                 <td>{item.costomerName}</td>
                 <td>{item.latestInvoice}</td>
                 <td className='bg-red-200 text-red-600'>{item.unpaid}</td>

@@ -18,7 +18,7 @@ const Costomer = () => {
                     <div className='lg:w-full px-8 ml-[300px] mt-[50px]'>
                         <div className='flex w-100 items-center justify-between py-5'>
                         <h1 className='text-3xl '>Costomers</h1>
-                       <Link to="/customers/1"><button className='btn bg-green-500 text-white'>New customer</button></Link> 
+                       <Link to="/customers/1"><button className='btn w-52 text-white bg-gray-600 hover:bg-gray-400'>New customer</button></Link> 
                         </div>
                         <div className='bg-white border px-2 py-5'>
                             <div className='flex items-center justify-start gap-20 '>
@@ -42,7 +42,7 @@ const Costomer = () => {
                             <CostaimerDetail />
                             <div className='divider'></div>
                             <div className='flex w-100 items-center justify-between'>
-                                <button className='btn bg-indigo-800 text-white hover:text-black font-semibold'>Process multiple customers</button>
+                                <button className='btn  shadow-lg bg-blue-600 hover:bg-blue-800 text-white'>Process multiple customers</button>
                                 <span className='text-gray-500 text-sm'>Showing 26 of 26 items </span>
 
                             </div>
