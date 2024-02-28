@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { TiTick } from "react-icons/ti";
+import { BsFillQuestionCircleFill } from "react-icons/bs";
 
 const AllUnreconciled = () => {
     const [data, setData] = useState([
@@ -7,12 +8,16 @@ const AllUnreconciled = () => {
             date: "2024-2-24",
             refrence: "",
             amount: "-400",
-            Tamount:"123456789",
+            Tamount: "123456789",
             summary: "Aqib",
             status: "Mobile",
         },
     ])
-
+    const handleCheckClick = (index) => {
+        const updatedData = [...data];
+        updatedData[index].confirmed = !updatedData[index].confirmed;
+        setData(updatedData);
+    };
 
     return (
         <>
@@ -59,7 +64,7 @@ const AllUnreconciled = () => {
                                 name="datePicker"
                                 className='border border-black'
                             />
-                           
+
 
                         </div>
                     </div>
@@ -70,13 +75,13 @@ const AllUnreconciled = () => {
                 </div>
                 <div className='flex items-center justify-evenly mt-5 border-b'>
                     <span className='font-semibold flex flex-col'>Bank transactions on the statement
-                    <span></span>
+                        <span></span>
                     </span>
                     <span className='font-semibold flex flex-col'>68220,80
-                    <span className='text-[10px] text-gray-500'>Balance , 2024-2-24</span>
+                        <span className='text-[10px] text-gray-500'>Balance , 2024-2-24</span>
                     </span>
                     <span className='font-semibold flex flex-col '>Accounting
-                    <span className='text-[10px] text-gray-500'>32 of 32 transactions to match or confirm </span>
+                        <span className='text-[10px] text-gray-500'>32 of 32 transactions to match or confirm </span>
                     </span>
 
                 </div>
@@ -93,27 +98,37 @@ const AllUnreconciled = () => {
                             <th></th>
                             <th>Summary</th>
                             <th>Status</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {/* row 1 */}
 
 
-                        {
-                            data.map((data) => {
-                                return (
-                                    <tr>
-                                        <td>{data.date}</td>
-                                        <td>{data.refrence}</td>
-                                        <td className=''> {data.amount} <br /> {data.Tamount}</td>
-                                        <td><TiTick className='text-green-500 text-xl'/></td>
-                                        <td>{data.summary}</td>
-                                        <td>{data.status}</td>
-                                    </tr>
 
-                                )
-                            })
-                        }
+                        {data.map((rowData, index) => (
+                            <tr key={index}>
+                                <td>{rowData.date}</td>
+                                <td>{rowData.refrence}</td>
+                                <td className=''>
+                                    {rowData.amount} <br /> {rowData.Tamount}
+                                </td>
+                                <td>
+                                    {rowData.confirmed ? (
+                                        <TiTick className='text-green-500 text-xl' />
+                                    ) : (
+                                        <BsFillQuestionCircleFill className='text-yellow-500 text-xl' />
+                                    )}
+                                </td>
+                                <td>{rowData.summary}</td>
+                                <td>{rowData.status}</td>
+                                <td>
+              <button className={`btn ${rowData.confirmed ? 'bg-green-500 text-white w-40' : 'bg-yellow-500 text-white w-40'}`} onClick={() => handleCheckClick(index)}>
+                {rowData.confirmed ? 'Confirmed' : 'Check'}
+              </button>
+            </td>
+                            </tr>
+                        ))}
 
                     </tbody>
                 </table>
@@ -123,3 +138,62 @@ const AllUnreconciled = () => {
 }
 
 export default AllUnreconciled
+
+
+
+// import React, { useState } from 'react';
+// import { TiTick } from 'react-icons/ti';
+
+// const AllUnreconciled = () => {
+//     const [data, setData] = useState([
+//         {
+//             date: '2024-2-24',
+//             refrence: '',
+//             amount: '-400',
+//             Tamount: '123456789',
+//             summary: 'Aqib',
+//             status: 'Mobile',
+//             confirmed: false, // Added a new property to track confirmation status
+//         },
+//     ]);
+
+//     const handleCheckClick = (index) => {
+//         const updatedData = [...data];
+//         updatedData[index].confirmed = !updatedData[index].confirmed;
+//         setData(updatedData);
+//     };
+
+//     return (
+//         <>
+//             {/* ... (rest of your code) */}
+//             <tbody>
+//                 {data.map((rowData, index) => (
+//                     <tr key={index}>
+//                         <td>{rowData.date}</td>
+//                         <td>{rowData.refrence}</td>
+//                         <td className=''>
+//                             {rowData.amount} <br /> {rowData.Tamount}
+//                         </td>
+//                         <td>
+//                             {rowData.confirmed ? (
+//                                 <TiTick className='text-green-500 text-xl' />
+//                             ) : (
+//                                 '?'
+//                             )}
+//                         </td>
+//                         <td>{rowData.summary}</td>
+//                         <td>{rowData.status}</td>
+//                         <td>
+//                             <button className='btn' onClick={() => handleCheckClick(index)}>
+//                                 {rowData.confirmed ? 'Confirmed' : 'Check'}
+//                             </button>
+//                         </td>
+//                     </tr>
+//                 ))}
+//             </tbody>
+//             {/* ... (rest of your code) */}
+//         </>
+//     );
+// };
+
+// export default AllUnreconciled;
