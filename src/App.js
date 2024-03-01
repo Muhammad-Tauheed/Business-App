@@ -20,6 +20,7 @@ import EditArticle from './Components/Sales/Articals/EditArticle';
 import JournalEntries from './Components/Accounting/Journal Entries/JournalEntries';
 import NewJournal from './Components/Accounting/Journal Entries/NewJournal';
 import CashandBank from './Components/CAsh and Bank/CashandBank';
+import AccountAnalysis from './Components/Accounting/Analysis Account/AccountAnalysis';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
     <Route path='/journalentries' element={<JournalEntries/>}></Route>
     <Route path='/newjournal' element={<NewJournal/>}></Route>
     <Route path='/cashandbank' element={<CashandBank/>}></Route>
+    <Route path='/analysis' element={<AccountAnalysis/>}></Route>
   </Routes>
   <ToastContainer /> 
     </div>

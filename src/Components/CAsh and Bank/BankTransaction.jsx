@@ -1,31 +1,17 @@
 import React, { useState } from 'react'
-import { TiTick } from "react-icons/ti";
-import { BsFillQuestionCircleFill } from "react-icons/bs";
 
-const AllUnreconciled = ({ openDrawer, onConfirmClick, showConfirmation, confirmationIndex, isPostAndShowNextClicked }) => {
+const BankTransaction = () => {
     const [data, setData] = useState([
         {
             date: "2024-2-24",
             refrence: "",
             amount: "-400",
             Tamount: "123456789",
-            summary: "Aqib",
-            status: "Mobile",
+            summary: "Paymant of sale invoice",
+            status: "OK'",
         },
     ]);
 
-  
-
-    const handleCheckClick = (index) => {
-        const updatedData = [...data];
-        updatedData[index].confirmed = !updatedData[index].confirmed;
-        setData(updatedData);
-    
-        // Ensure onConfirmClick is a function before calling it
-        if (typeof onConfirmClick === 'function') {
-            onConfirmClick(index, updatedData[index].confirmed);
-        }
-    };
     return (
         <>
             <div className="overflow-x-auto">
@@ -102,10 +88,8 @@ const AllUnreconciled = ({ openDrawer, onConfirmClick, showConfirmation, confirm
                             <th>Date</th>
                             <th>Refrance</th>
                             <th>Amount</th>
-                            <th></th>
                             <th>Summary</th>
                             <th>Status</th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -115,29 +99,10 @@ const AllUnreconciled = ({ openDrawer, onConfirmClick, showConfirmation, confirm
                             <tr key={index}>
                                 <td>{rowData.date}</td>
                                 <td>{rowData.refrence}</td>
-                                <td className=''>
-                                    {rowData.amount} <br /> {rowData.Tamount}
-                                </td>
-                                <td>
-                                    {showConfirmation || confirmationIndex === index ? (
-                                        <TiTick className='text-green-500 text-xl' />
-                                    ) : (
-                                        <BsFillQuestionCircleFill className='text-yellow-500 text-xl' />
-                                    )}
-                                </td>
+                                <td className=''> {rowData.Tamount}</td>
                                 <td>{rowData.summary}</td>
                                 <td>{rowData.status}</td>
-                                <td>
-                                    <button
-                                        className={`btn ${showConfirmation || confirmationIndex === index ? 'bg-green-500 text-white w-40' : 'bg-yellow-500 text-white w-40'}`}
-                                        onClick={() => {
-                                            handleCheckClick(index);
-                                            openDrawer(null, index);
-                                        }}
-                                    >
-                                        {isPostAndShowNextClicked ? 'Confirmed' : (showConfirmation || confirmationIndex === index ? 'Confirmed' : 'Match')}
-                                    </button>
-                                </td>
+                                
                             </tr>
                         ))}
 
@@ -150,6 +115,4 @@ const AllUnreconciled = ({ openDrawer, onConfirmClick, showConfirmation, confirm
     )
 }
 
-export default AllUnreconciled
-
-
+export default BankTransaction
