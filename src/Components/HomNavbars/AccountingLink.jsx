@@ -1,6 +1,11 @@
 import React from 'react'
-import { MdAccountBalance } from 'react-icons/md'
+import { BiSolidReport } from 'react-icons/bi';
+import { BsJournalBookmarkFill } from 'react-icons/bs';
+import { MdAccountBalance, MdGpsFixed, MdOutlineAccountTree } from 'react-icons/md'
 import { Link, useLocation } from 'react-router-dom';
+import { HiOutlineDocumentReport } from "react-icons/hi";
+import { FaCalendarAlt } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
 
 const AccountingLink = () => {
     const { pathname } = useLocation();
@@ -16,31 +21,31 @@ const AccountingLink = () => {
 
                         <Link to={"/journalentries"}>
                             <li className={`hover:bg-gray-300 font-semibold text-black ${pathname === "/journalentries" || pathname === "/newjournal" ? "bg-gray-300 hover:bg-gray-400 rounded-lg font-semibold" : ""}`}>
-                                <a>Journal entries</a>
+                                <a><BsJournalBookmarkFill /> Journal entries</a>
                             </li>
                         </Link>
                         <Link to={"/analysis"}><li  className={`hover:bg-gray-300 font-semibold text-black ${pathname === "/analysis" ? "bg-gray-300 hover:bg-gray-400 rounded-lg font-semibold" : ""}`}>
-                            <a>Account analysis </a>
+                            <a><MdOutlineAccountTree /> Account analysis </a>
                         </li></Link>
 
                         <li className={`hover:bg-gray-300 font-semibold text-black ${pathname === "" ? "bg-gray-300 hover:bg-gray-400 rounded-lg font-semibold" : ""}`}>
-                            <a>VAT report </a>
+                            <a><BiSolidReport /> VAT report </a>
                         </li>
 
                         <li className={`hover:bg-gray-300 font-semibold text-black ${pathname === "" ? "bg-gray-300 hover:bg-gray-400 rounded-lg font-semibold" : ""}`}>
-                            <a>EU periodic VAT </a>
+                            <a><HiOutlineDocumentReport /> EU periodic VAT </a>
                         </li>
 
                         <li className={`hover:bg-gray-300 font-semibold text-black ${pathname === "" ? "bg-gray-300 hover:bg-gray-400 rounded-lg font-semibold" : ""}`}>
-                            <a>End-of-year check </a>
+                            <a><FaCalendarAlt /> End-of-year check </a>
                         </li>
 
                         <li className={`hover:bg-gray-300 font-semibold text-black ${pathname === "" ? "bg-gray-300 hover:bg-gray-400 rounded-lg font-semibold" : ""}`}>
-                            <a>Fixed assets </a>
+                            <a><MdGpsFixed /> Fixed assets </a>
                         </li>
 
                         <li className={`hover:bg-gray-300 font-semibold text-black ${pathname === "" ? "bg-gray-300 hover:bg-gray-400 rounded-lg font-semibold" : ""}`}>
-                            <a>Cost centers </a>
+                            <a><FaLocationDot /> Cost centers </a>
                         </li>
                     </ul>
                 </details>

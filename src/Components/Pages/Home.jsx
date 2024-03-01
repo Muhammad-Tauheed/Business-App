@@ -37,25 +37,3 @@ export default Home
 
 
 
-
-
-{/* <div className='h-full bg-white'>
-<div className='fixed w-screen z-50'>
-      <TopBar />
-</div>
-
-
-      <div className='flex'>
-        <div className='lg:w-1/5 bg-black fixed h-full mt-[50px]'>
-          <Sidebar />
-        </div>
-
-        <div className=' px-5 ml-[300px] mt-[50px]'>
-          <StartPage />
-        </div>
-        
-        
-
-      </div>
-
-    </div> */}

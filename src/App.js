@@ -6,7 +6,7 @@ import Signup from './Components/Pages/Signup';
 import Home from './Components/Pages/Home';
 import SaleInvoice from './Components/Sales/SaleInvoice';
 import NewInoice from './Components/Sales/NewInoice';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import Costomer from './Components/Sales/Costomers/Costomer';
 import NewCostomer from './Components/Sales/Costomers/NewCostomer';
 import Suppliers from './Components/Purchases/Suppliers/Suppliers';
@@ -21,38 +21,48 @@ import JournalEntries from './Components/Accounting/Journal Entries/JournalEntri
 import NewJournal from './Components/Accounting/Journal Entries/NewJournal';
 import CashandBank from './Components/CAsh and Bank/CashandBank';
 import AccountAnalysis from './Components/Accounting/Analysis Account/AccountAnalysis';
+import GatePass from './Components/Gate Pass/GatePass';
+import NewGatePass from './Components/Gate Pass/NewGatePass';
+import Countries from './Components/Application Setup/Classifications/Country/Countries';
+import Groups from './Components/Application Setup/Classifications/Groups/Groups';
+import Vehicles from './Components/Application Setup/Distribution Setup/Vehicles';
 
 function App() {
   return (
     <>
-    <div className='h-screen'>
-  <Routes>
-  
-  <Route path='/' element={<LandingPage/>}></Route>
-    <Route path='/login' element={<Login/>}></Route>
-    <Route path='/signup' element={<Signup/>}></Route>
-    <Route path='/home' element={<Home/>}></Route>
-    <Route path='/saleInvoice' element={<SaleInvoice/>}></Route>
-    <Route path='/saleInvoice/:id' element={<NewInoice/>}></Route>
-    <Route path='/customers' element={<Costomer/>}></Route>
-    <Route path='/customers/:id' element={<NewCostomer/>}></Route>
-    <Route path='/suppliers' element={<Suppliers/>}></Route>
-    <Route path='/suppliers/:id' element={<NewSupplier/>}></Route>
-    <Route path='/purchases' element={<PuschaseInvoice/>}></Route>
-    <Route path='/purchases/:id' element={<NewPurchaseInvoice/>}></Route>
-    <Route path='/newarticles' element={<NewArticals/>}></Route>
-    <Route path='/editcustomer' element={<EditCustomer/>}></Route>
-    <Route path='/article' element={<Artical/>}></Route>
-    <Route path='/editarticle' element={<EditArticle/>}></Route>
-    <Route path='/journalentries' element={<JournalEntries/>}></Route>
-    <Route path='/newjournal' element={<NewJournal/>}></Route>
-    <Route path='/cashandbank' element={<CashandBank/>}></Route>
-    <Route path='/analysis' element={<AccountAnalysis/>}></Route>
-  </Routes>
-  <ToastContainer /> 
-    </div>
+      <div className='h-screen'>
+        <Routes>
+
+          <Route path='/' element={<LandingPage />}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/signup' element={<Signup />}></Route>
+          <Route path='/home' element={<Home />}></Route>
+          <Route path='/saleInvoice' element={<SaleInvoice />}></Route>
+          <Route path='/saleInvoice/:id' element={<NewInoice />}></Route>
+          <Route path='/customers' element={<Costomer />}></Route>
+          <Route path='/customers/:id' element={<NewCostomer />}></Route>
+          <Route path='/suppliers' element={<Suppliers />}></Route>
+          <Route path='/suppliers/:id' element={<NewSupplier />}></Route>
+          <Route path='/purchases' element={<PuschaseInvoice />}></Route>
+          <Route path='/purchases/:id' element={<NewPurchaseInvoice />}></Route>
+          <Route path='/newarticles' element={<NewArticals />}></Route>
+          <Route path='/editcustomer' element={<EditCustomer />}></Route>
+          <Route path='/article' element={<Artical />}></Route>
+          <Route path='/editarticle' element={<EditArticle />}></Route>
+          <Route path='/journalentries' element={<JournalEntries />}></Route>
+          <Route path='/newjournal' element={<NewJournal />}></Route>
+          <Route path='/cashandbank' element={<CashandBank />}></Route>
+          <Route path='/analysis' element={<AccountAnalysis />}></Route>
+          <Route path='/gatepass' element={<GatePass />}></Route>
+          <Route path='/newgatepass' element={<NewGatePass />}></Route>
+          <Route path='/countries' element={<Countries />}></Route>
+          <Route path='/groups' element={<Groups />}></Route>
+          <Route path='/vehicles' element={<Vehicles />}></Route>
+        </Routes>
+        <ToastContainer />
+      </div>
     </>
-  
+
   );
 }
 

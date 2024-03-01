@@ -19,7 +19,7 @@ const Article = () => {
             <div className='w-full px-8 max-2xl:ml-[250px] max-xl:ml-[100px] mt-[50px] overflow-x-hidden'>
                 <div className='flex w-100 items-center justify-between py-5'>
                 <h1 className='text-3xl '>Articles</h1>
-               <Link to="/newarticles"><button className='btn w-52 text-white bg-gray-600 hover:bg-gray-400'>New customer</button></Link> 
+               <Link to="/newarticles"><button className='btn w-52 text-white bg-gray-600 hover:bg-gray-400'>New Article</button></Link> 
                 </div>
                 <div className='bg-white border px-2 py-5'>
                     <div className='flex items-center justify-start gap-20 '>
@@ -29,7 +29,7 @@ const Article = () => {
                             className='input input-bordered border-indigo-800 w-[300px] py-1 rounded-full'
                         />
                         <div>
-                            <label className='text-lg font-semibold ' htmlFor="gender">Costomer labels </label>
+                            <label className='text-lg font-semibold ' htmlFor="gender">Article labels </label>
                             <select className='border w-60 rounded-xl py-2'>
                                 <option value=""></option>
                                 <option value="male">Normal</option>

@@ -1,21 +1,16 @@
-import React, { useState } from 'react'
-import { BsBoxArrowLeft, BsBoxArrowRight } from "react-icons/bs";
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { FaMoneyBillAlt } from "react-icons/fa";
-import { FaBoxOpen } from "react-icons/fa";
+import React from 'react'
 import { GiWallet } from "react-icons/gi";
-import { FaMoneyBillTransfer } from "react-icons/fa6";
-import { MdAccountBalance } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { SlWallet } from "react-icons/sl";
 import { IoIosApps } from "react-icons/io";
-import { Link, useLocation } from 'react-router-dom';
-import { FaHome } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
 import StatrLink from './StatrLink';
 import SalesLink from './SalesLink';
 import PurchasingLink from './PurchasingLink';
 import AccountingLink from './AccountingLink';
 import CashAndBackLink from './CashAndBackLink';
+import ManufacturingLink from './ManufacturingLink';
+import CompanySetup from './CompanySetup';
 
 const SideLinks = () => {
     const { pathname } = useLocation();
@@ -27,6 +22,9 @@ const SideLinks = () => {
            <StatrLink/>
            <SalesLink/>
            <PurchasingLink/>
+            <AccountingLink/>
+            <CompanySetup/>
+            <ManufacturingLink/>
 
             <li className='flex justify-between w-full '>
                 <a className='px-10 text-xl font-semibold max-2xl:text-[16px] max-xl:text-[14px] '>
@@ -36,7 +34,6 @@ const SideLinks = () => {
 
             <CashAndBackLink/>
 
-            <AccountingLink/>
 
             <li className='w-full'>
                 <details className='flex justify-between w-full'>
@@ -53,6 +50,7 @@ const SideLinks = () => {
                     </ul>
                 </details>
             </li>
+
 
             <li className='flex justify-between w-full'>
                 <a className='px-10 text-[16px] font-semibold'>
